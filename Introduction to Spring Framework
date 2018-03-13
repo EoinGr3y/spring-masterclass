@@ -1,0 +1,30 @@
+
+		Introduction to Spring Framework
+	-	Spring is a dependency injection framework.
+	-	Avoid tight coupling, EG. having constructors for dependencies;
+
+		//Tight coupling
+		public class ComplexBusinessService	 { 
+			SortAlgorithm algorithm = new BubbleSortAlgorithm();
+		}
+
+		//Decoupled
+		public class ComplexBusinessService	 { 
+			SortAlgorithm algorithm;
+
+			public ComplexBusinessService(SortAlgorithm sortAlgorithm) {
+				this.algorithm = sortAlgorithm;
+			}
+		}
+
+	-	Use @Component annotation to tell spring to manage instances of a class.
+	-	Use @Autowired annotation to tell spring to manage a dependency of a component.
+
+		//Spring
+		@Component
+		public class ComplexBusinessService	 {
+			@Autowired
+			SortAlgorithm algorithm;
+		}
+
+	-	Instances of components are also known as beans.
