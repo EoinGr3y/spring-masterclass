@@ -1,0 +1,8 @@
+
+		Scope of a bean
+	-	Singleton is default scope for beans in Spring.
+
+	-	Singleton - one instance per context.
+	-	Prototype - new bean whenever requested.
+	-	Request - one bean per http request.
+	-	Session - one bean per http session.
