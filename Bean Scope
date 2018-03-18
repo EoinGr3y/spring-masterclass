@@ -6,3 +6,7 @@
 	-	Prototype - new bean whenever requested.
 	-	Request - one bean per http request.
 	-	Session - one bean per http session.
+
+	-	Use proxyMode annotation if you need a prototype bean within a singleton bean.
+
+	- 	Spring singleton is different from GOF singleton in that you can have multiple singletons per JVM, one per application context. GOF singleton is one per JVM.
