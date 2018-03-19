@@ -1,0 +1,8 @@
+
+		@Component vs @Service vs @Respository vs @Controller
+	-	@Component is generic and can be used in any layer (not advised)
+	-	@Controller should be used in the web layer.
+	-	@Service should be used in the business layer.
+	-	@Repository should be used in the data layer.
+
+	There is no functional difference between these annotations however you can configure specific behaviour by annotation.
