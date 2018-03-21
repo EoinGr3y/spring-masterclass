@@ -2,3 +2,4 @@
 /RemoteSystemsTempFiles/*
 /.recommenders/*
 geckodriver.log
+/.recommenders/
