@@ -1,0 +1,20 @@
+
+		Differences between Spring and Spring Boot
+
+	-	Spring boot automatically defines @ComponentScan in current package and sub dirs.
+	-	Application context is retrieved differently, use SpringApplication.run for spring boot and new AnnotationConfigApplicationContext for spring
+
+
+		Spring Boot vs Spring vs Spring MVC
+
+	-	Spring - most important feature is dependency injection and Inversion of Control (IOC).
+	-	Spring MVc - provides simple means of developing web applications through separation of concerns.
+	-	Spring boot - makes it easy to create applications quickly, removes large configuration overhead.
+
+		Spring boot actuator
+	-	Recored metrics on spring boot instance, such as connections, endpoints, memory used etc.
+	-	Can use hal browser to traverse data.
+
+		Spring boot devtools
+	-	Automatically restarts server when changes are saved.
+	-	Doesn't reploy dependencies to decrease delay.

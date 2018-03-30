@@ -1,4 +1,6 @@
 
+
+		
 		Introduction to Spring Framework
 	-	Spring is a dependency injection framework.
 	-	Avoid tight coupling, EG. having constructors for dependencies;
@@ -28,3 +30,10 @@
 		}
 
 	-	Instances of components are also known as beans.
+
+		
+		Why is Spring so popular?
+	-	Produces code that is easy to test, through dependency injection. Also provides good support for JUnit, Mockito and other test frameworks.
+	-	No plumbing code for exception handling, xml configuration etc.
+	-	Enables flexible architecture due to it's modularity. Only take the parts of Spring you need.
+	-	Stays current, new projects such as Spring Cloud and Spring Boot keep spring relevent.

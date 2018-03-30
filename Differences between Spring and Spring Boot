@@ -1,4 +1,0 @@
-
-		Differences between Spring and Spring Boot
-	-	Spring boot automatically defines @ComponentScan in current package and sub dirs.
-	-	Application context is retrieved differently, use SpringApplication.run for spring boot and new AnnotationConfigApplicationContext for spring

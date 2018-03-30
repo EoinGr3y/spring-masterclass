@@ -1,0 +1,33 @@
+
+
+		Scope of a bean
+
+	-	Singleton is default scope for beans in Spring.
+
+	-	Singleton - one instance per context.
+	-	Prototype - new bean whenever requested.
+	-	Request - one bean per http request.
+	-	Session - one bean per http session.
+
+	-	Use proxyMode annotation if you need a prototype bean within a singleton bean.
+
+	- 	Spring singleton is different from GOF singleton in that you can have multiple singletons per JVM, one per application context. GOF singleton is one per JVM.
+
+		@Component vs @Service vs @Respository vs @Controller
+
+	-	@Component is generic and can be used in any layer (not advised)
+	-	@Controller should be used in the web layer.
+	-	@Service should be used in the business layer.
+	-	@Repository should be used in the data layer.
+
+		There is no functional difference between these annotations however you can configure specific behaviour by annotation.
+
+		Autowiring in depth
+
+	-	Use @Primary annotation to disguish which @Component is used when there is ambiguity.
+	-	Name of injected field can also be used during ambiguity.
+	-	@Primary annotation takes precedence if it and name of field are in conflict.
+	-	@Qualifier annotation can also be used to resolve ambiguity.
+
+	-	Use @Primary when you have one implementation that is most widely used.
+	-	Use name or qualifier in situations when you are more likely to change implementation.
