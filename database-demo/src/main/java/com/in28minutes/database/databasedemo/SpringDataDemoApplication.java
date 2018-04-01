@@ -7,20 +7,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.in28minutes.database.databasedemo.entity.PersonJpa;
-import com.in28minutes.database.databasedemo.jpa.PersonJpaRepository;
+import com.in28minutes.database.databasedemo.springdata.PersonSpringDataRepository;
 
-//@SpringBootApplication
-public class JpaDemoApplication implements CommandLineRunner {
+@SpringBootApplication
+public class SpringDataDemoApplication implements CommandLineRunner {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    PersonJpaRepository repository;
+    PersonSpringDataRepository repository;
 
     public static void main(final String[] args) {
-        SpringApplication.run(JpaDemoApplication.class, args);
+        SpringApplication.run(SpringDataDemoApplication.class, args);
     }
 
     @Override
@@ -30,7 +31,7 @@ public class JpaDemoApplication implements CommandLineRunner {
         // this.logger.info("User location New York -> {}", this.dao.findByLocation("New
         // York"));
         repository.deleteById(10002);
-        logger.info("Inserting -> {}", repository.insert(new PersonJpa("Tara", "Berlin", new Date())));
-        logger.info("Updating 10003 -> {}", repository.update(new PersonJpa(10003, "Pieter", "Utrecht", new Date())));
+        logger.info("Inserting -> {}", repository.save(new PersonJpa("Tara", "Berlin", new Date())));
+        logger.info("Updating 10003 -> {}", repository.save(new PersonJpa(10003, "Pieter", "Utrecht", new Date())));
     }
 }
