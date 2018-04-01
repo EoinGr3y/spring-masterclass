@@ -5,13 +5,13 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.in28minutes.database.databasedemo.entity.Person;
+import com.in28minutes.database.databasedemo.entity.PersonJdbc;
 
-class PersonRowMapper implements RowMapper<Person> {
+class PersonRowMapper implements RowMapper<PersonJdbc> {
 
 	@Override
-	public Person mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-		Person person = new Person();
+	public PersonJdbc mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+		PersonJdbc person = new PersonJdbc();
 		person.setId(resultSet.getInt("id"));
 		person.setName(resultSet.getString("name"));
 		person.setLocation(resultSet.getString("location"));
